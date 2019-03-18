@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Pokecard from './Pokecard';
+import Pokedex from './Pokedex';
+import pickRandom from './helper';
 
-class Pokedex extends Component {
+class Pokegame extends Component {
     static defaultProps = {
         pokemon: [
             { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
@@ -16,15 +17,20 @@ class Pokedex extends Component {
     }
 
     render() {
-        return (
-            <div>
-                {this.props.pokemon.map (p =>
-                <Pokecard id={ p.id } name={ p.name } type={ p.type } base_experience={ p.base_experience } />) }
 
-                <b>Total EXP: { this.props.totalExp }</b>
-            </div>
-        );
-    }
+        const pokemons = pickRandom(this.props.pokemon, 4);
+        const exp = pokemons.reduce((acc, p) => acc+p.base_experience, 0);
+
+        const pokemons1 = pickRandom(this.props.pokemon, 4);
+        const exp1 = pokemons1.reduce((acc, p) => acc+p.base_experience, 0);
+
+    return (
+        <div>
+            <Pokedex pokemon={ pokemons } totalExp={ exp }/>
+            <Pokedex pokemon={ pokemons1 } totalExp={ exp1 } />
+        </div>
+    );
+  }
 }
 
-export default Pokedex;
+export default Pokegame;

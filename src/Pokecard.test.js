@@ -1,16 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import App from "./App";
+import Pokecard from "./Pokecard";
 
 // smoke test
 it("renders without crashing", function() {
-  shallow(<App />);
+  shallow(<Pokecard />);
 });
 
 // snapshot test
 it("matches snapshot", function() {
-  let wrapper = shallow(<App />);
+  let wrapper = shallow(<Pokecard />);
   let serialized = toJson(wrapper);
   expect(serialized).toMatchSnapshot();
 });

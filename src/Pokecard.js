@@ -7,8 +7,8 @@ class Pokecard extends Component {
         return (
             <div>
                 <p>{ this.props.name }</p>
-                <img src={ IMG_URL + this.props.id + ".png" } alt={ this.props.name } />
-                <small>Type: { this.props.type }</small>
+                <img src={ IMG_URL + this.props.id + ".png" } alt={ this.props.name } /><br/>
+                <small>Type: { this.props.type }</small><br/>
                 <small>EXP: { this.props.base_experience }</small>
             </div>
         );
