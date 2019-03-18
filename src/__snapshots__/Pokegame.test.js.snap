@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <Pokedex
+    pokemon={
+      Array [
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+      ]
+    }
+    totalExp={260}
+  />
+  <Pokedex
+    pokemon={
+      Array [
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+        Object {
+          "base_experience": 65,
+          "id": 133,
+          "name": "Eevee",
+          "type": "normal",
+        },
+      ]
+    }
+    totalExp={260}
+  />
+</div>
+`;

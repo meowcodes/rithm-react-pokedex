@@ -50,5 +50,22 @@ exports[`matches snapshot 1`] = `
     name="Eevee"
     type="normal"
   />
+  <b>
+    Total EXP: 
+  </b>
+</div>
+`;
+
+exports[`matches snapshot 2`] = `
+<div>
+  <Pokecard
+    base_experience={65}
+    id={133}
+    name="Eevee"
+    type="normal"
+  />
+  <b>
+    Total EXP: 
+  </b>
 </div>
 `;

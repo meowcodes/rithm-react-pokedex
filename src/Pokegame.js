@@ -17,17 +17,22 @@ class Pokegame extends Component {
     }
 
     render() {
+        const pokemonsP1 = pickRandom(this.props.pokemon, 4);
+        let expP1 = 0;
+        for(let p of pokemonsP1){
+            expP1 += p.base_experience
+        }
 
-        const pokemons = pickRandom(this.props.pokemon, 4);
-        const exp = pokemons.reduce((acc, p) => acc+p.base_experience, 0);
-
-        const pokemons1 = pickRandom(this.props.pokemon, 4);
-        const exp1 = pokemons1.reduce((acc, p) => acc+p.base_experience, 0);
+        const pokemonsP2 = pickRandom(this.props.pokemon, 4);
+        let expP2 = 0;
+        for(let p of pokemonsP2){
+            expP2 += p.base_experience
+        }
 
     return (
         <div>
-            <Pokedex pokemon={ pokemons } totalExp={ exp }/>
-            <Pokedex pokemon={ pokemons1 } totalExp={ exp1 } />
+            <Pokedex pokemon={ pokemonsP1 } totalExp={ expP1 }/>
+            <Pokedex pokemon={ pokemonsP2 } totalExp={ expP2 } />
         </div>
     );
   }
